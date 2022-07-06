@@ -13,7 +13,7 @@ const main = async () => {
 const runMain = async () =>{
   try {
     await main();
-    process.print("Transactions deployed to:", transactions.address);
+    process.exit(0);
   } catch (error) {
     console.error(error);
     process.exit(1);
