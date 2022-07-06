@@ -1,6 +1,3 @@
-const { expect } = require("chai");
-const { ethers } = require("hardhat");
-
 const main = async () => {
   const Transactions = await hre.ethers.getContractFactory("Transactions");
   const transactions = await Transactions.deploy();
@@ -13,7 +10,7 @@ const main = async () => {
 const runMain = async () =>{
   try {
     await main();
-    process.print("Transactions deployed to:", transactions.address);
+    process.exit(0);
   } catch (error) {
     console.error(error);
     process.exit(1);
